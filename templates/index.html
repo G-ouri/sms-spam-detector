@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SMS Spam Detector</title>
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+  <div class="container">
+    <h1>📱 SMS Spam Detector</h1>
+    <p class="subtitle">Enter any SMS message to check if it's spam</p>
+
+    <textarea id="sms-input" placeholder="Type or paste an SMS here..."></textarea>
+
+    <button id="check-btn" onclick="checkSpam()">Check Message</button>
+
+    <div id="result-box" class="hidden">
+      <div id="verdict"></div>
+      <div id="confidence"></div>
+      <div id="explanation"></div>
+    </div>
+
+    <div id="error-box" class="hidden error">
+      Something went wrong.Please try again later.
+    </div>
+  </div>
+
+  <script src="{% static 'app.js' %}"></script>
+</body>
+</html>
